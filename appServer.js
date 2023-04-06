@@ -210,6 +210,7 @@ app.patch('/api/v1/pokemon/:id', asyncWrapper(async (req, res) => {
 app.get('/report', (req, res) => {
   console.log("Report requested");
   res.send(`Table ${req.query.id}`)
+  //TODO: Implement report generation
 })
 
 
