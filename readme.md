@@ -1,66 +1,70 @@
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-c66648af7eb3fe8bc4f294546bfd86ef473780cde1dea487d3c4ff354943c9ae.svg)](https://classroom.github.com/online_ide?assignment_repo_id=10597150&assignment_repo_type=AssignmentRepo)
-# Assignment 2
-For this assignment, write *Supertest* tests to ensure that the JWT authentication and authorization system that we have developed this week works as expected for the Pokemon API. Here are requirements for the tests:
+# Getting Started with Create React App
 
-## Introduction
-In this assignment, you will learn how to implement JSON Web Tokens (JWT) for authentication and authorization in a Node.js application that communicates with a MongoDB database. You will use the provided authentication and resource servers that are already implemented using Express.js, Mongoose, and JWT. 
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Available Scripts
 
-## Objective
-The objective of this assignment is to teach you how to implement JWT-based authentication and authorization in a Node.js application that communicates with a MongoDB database. By the end of the assignment, you should be able to understand the principles of JWT-based authentication, implement JWT-based authentication and authorization in a Node.js application, and understand how to use JWT to protect routes and resources.
+In the project directory, you can run:
 
+### `npm start`
 
-## JWT Requirement #1 - `Authorization` header
-Distinguish access tokens from refresh tokens using a single `Authorization` header and use different token types or prefixes for each token type.
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-For example, you could use the `Bearer` prefix for access tokens and the `Refresh` prefix for refresh tokens. This would allow you to easily differentiate between the two types of tokens based on their prefix.
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-Here's an example of how you could use this approach:
-```
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
-```
-Send the refresh token in the Authorization header with the Refresh prefix, like this:
+### `npm test`
 
-```
-Authorization: Refresh eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
-```
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-On the server-side, you would need to parse the Authorization header and check the prefix to determine whether the token is an access token or a refresh token.
+### `npm run build`
 
-## JWT Requirement #2 - Logout
-When a user logs out or their account is disabled. Previously issued tokens should be invalidated. 
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-## Testing Requirements
-- Test that the /register endpoint creates a new user in the database with the correct hashed password
-- Test that the /login endpoint returns a JWT access token and refresh token for valid credentials
-- Test that the /login endpoint throws a PokemonAuthError for invalid credentials
-- Test that the /requestNewAccessToken endpoint returns a new JWT access token for a valid refresh token
-- Test that the /requestNewAccessToken endpoint throws a PokemonAuthError for an invalid or missing refresh token
-- Test that the refresh token is added to the refreshTokens array on login and removed on logout
-- Test that the JWT access token can be decoded and contains the correct user data
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-More tests:
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-- Test that a user can successfully register, login, and make a request with a JWT access token
-- Test that an unauthenticated user cannot access protected endpoints
-- Test that an expired JWT access token cannot be used to access protected endpoints
-- Test that a request with an invalid JWT access token throws a PokemonAuthError
-- Test that a refresh token cannot be used to access protected endpoints
-- Test that a request with an invalid or missing refresh token throws a PokemonAuthError
-- Test that non-admin user cannot access admin protected routes
-- Test that after logging out, a user cannot access protected routes until the user re-login
+### `npm run eject`
 
-Also test error handling and edge cases, such as:
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-- Invalid payloads for register and login endpoints
-- Invalid token secrets or expiration times
-- Unhandled database errors
-- Duplicate or missing documents in the database
-- Invalid HTTP requests or responses
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Tests should cover all possible scenarios and ensure that the authentication and authorization system works correctly and securely.
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-## Deliverables
-- 5-min YT presentation going over your tests
-- GitHub classroom link  
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

@@ -1,0 +1,109 @@
+/* reponsive layout for Page.js */
+
+/* 1. Mobile */
+@media only screen and (max-width: 600px) {
+    .page {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .page .page__title {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+    .page .page__content {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .page .page__content .page__content__title {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    .page .page__content .page__content__text {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+    .page .page__content .page__content__button {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+}
+
+/* 2. Tablet */
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+    .page {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .page .page__title {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+    .page .page__content {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .page .page__content .page__content__title {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    .page .page__content .page__content__text {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+    .page .page__content .page__content__button {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+}
+
+/* 3. Desktop */
+@media only screen and (min-width: 901px) {
+    .page {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .page .page__title {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+    .page .page__content {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .page .page__content .page__content__title {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    .page .page__content .page__content__text {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+    .page .page__content .page__content__button {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+}

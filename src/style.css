@@ -1,0 +1,50 @@
+.pokedex {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 10px;
+    /* adjust the gap between the divs */
+}
+
+.pokemon_container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    width: auto;
+    text-align: center;
+    display: inline-block;
+    padding: 5px;
+    margin: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.pokemon_container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.pokemon_container:hover {
+    transform: scale(1.01);
+    z-index: 1;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+
+.btnActive {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* center btnBar */
+.btnBar {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin: 10px;
+}
